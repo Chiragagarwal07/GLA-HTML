@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #001;
+            overflow: hidden;
+            margin: 0;
+            position: relative;
+        }
+
+        .solar-system {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: gold;
+            border-radius: 50%;
+            box-shadow: 0 0 20px yellow;
+            transform: translate(-50%, -50%);
+        }
+
+        .planet {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            animation: orbit linear infinite;
+        }
+
+        .planet1 {
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            animation-duration: 4s;
+            transform-origin: -100px;
+        }
+
+        .planet2 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            animation-duration: 6s;
+            transform-origin: -140px;
+        }
+
+        .planet3 {
+            width: 25px;
+            height: 25px;
+            background-color: green;
+            animation-duration: 5s;
+            transform-origin: -180px;
+        }
+
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg) translateX(100px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(100px) rotate(-360deg);
+            }
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+                opacity: 0.5;
+            }
+        }
+
+        /* Add stars in random positions */
+        .star:nth-child(1) { width: 2px; height: 2px; top: 20%; left: 15%; }
+        .star:nth-child(2) { width: 3px; height: 3px; top: 70%; left: 30%; }
+        .star:nth-child(3) { width: 1.5px; height: 1.5px; top: 40%; left: 85%; }
+        .star:nth-child(4) { width: 2.5px; height: 2.5px; top: 10%; left: 60%; }
+        .star:nth-child(5) { width: 1px; height: 1px; top: 80%; left: 25%; }
+        .star:nth-child(6) { width: 3px; height: 3px; top: 60%; left: 75%; }
+    </style>
+</head>
+<body>
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+</body>
+</html>

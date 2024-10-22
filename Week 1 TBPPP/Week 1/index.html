@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-black text-white">
+    <div id="card" class="absolute left-[600px] top-[200px] hidden flex-col justify-center items-center w-[400px] h-[200px] bg-red-600">
+        <p class="absolute right-2 top-0 cursor-pointer font-bold text-xl" onclick="close()">o</p>
+        <p class="font-bold">Subject:</p>
+        <p class="font-bold">Type:</p>
+        <p class="font-bold">Faculty:</p>
+    </div>
+    <div class="grid grid-cols-6 grid-rows-7 border-2 text-center p-2 gap-x-10 gap-y-2 justify-center">
+        <div class="col-span-6 text-3xl font-extrabold text-center p-6 border-2 border-slate-500">Time Table</div>
+        <div class="grid border-2 border-slate-500 row-span-6">
+            <div class="mt-[90px] font-bold p-7 bg-slate-500">09:00 AM - 10:00 AM</div>
+            <div class=" font-bold p-7 bg-slate-500">10:00 AM - 11:00 AM</div>
+            <div class=" font-bold p-7 bg-slate-500">11:00 AM - 12:00 PM</div>
+            <div class="font-bold p-7 bg-slate-500">12:00 PM - 01:00 PM</div>
+            <div class="font-bold p-7 bg-slate-500">01:00 PM - 02:00 PM</div>
+        </div>
+        <div class="grid grid-cols-5 col-span-5 bg-slate-500">
+            <div class=" font-bold text-2xl border-2 border-slate-500 p-6">Monday</div>
+            <div class=" font-bold text-2xl border-2 border-slate-500 p-6">Tuesday</div>
+            <div class=" font-bold text-2xl border-2 border-slate-500 p-6">Wednesday</div>
+            <div class=" font-bold text-2xl border-2 border-slate-500 p-6">Thursday</div>
+            <div class=" font-bold text-2xl border-2 border-slate-500 p-6">Friday</div>
+        </div>
+        <div onclick="details()" class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Quant & Reasoning</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Full Stack</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Full Stack</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Machine Learning</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">DAA</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Competitive Programming</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">DAA</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Competitive Programming</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Verbal</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">DAA</div>
+        <div class=" text-xl border-2 border-slate-500 col-span-5 p-2">Lunch</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Full Stack</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Theory of Automata</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Theory of Automata</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Agile Software Development</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Theory of Automata</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Full Stack</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Logical Reasoning</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Group Discussion</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Agile Software Development</div>
+        <div class="transition duration-700 ease-in-out hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-xl border-2 border-slate-500 p-2">Theory of Automata</div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

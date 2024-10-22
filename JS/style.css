@@ -1,0 +1,47 @@
+*::after,
+*::before,
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    
+}
+.left-section{
+    /* position: absolute; */
+    background-image: url("./images/left-bg.jpg");
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+.right-section{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logos{
+    display: flex;
+    gap: 2rem;
+}
+#logos-img1{
+    width: 100px;
+}
+#logos-img2{
+    width: 350px;
+}
+#logos-img3{
+    width: 250;
+}
